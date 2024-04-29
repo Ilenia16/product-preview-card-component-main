@@ -1,0 +1,135 @@
+
+
+:root{
+    --cream: hsl(30, 38%, 92%); 
+    --cyan: hsl(158, 36%, 37%);
+    --darkblue: hsl(212, 21%, 14%);
+    --grayblue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.image{
+    background-image: url("./images/image-product-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 239px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 0rem;
+}
+
+body{
+    background-color: var(--cream);
+    font-family: "Montserrat", sans-serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "image"
+                         "text";
+}
+
+.container{
+    background-color: var(--white);
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    border-radius: 10px;   
+}
+
+.perfume{
+    font-weight: 500;
+    color: var(--grayblue);
+    margin-top: -0.3rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.4rem;
+}
+
+.text{
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    margin-top: -25px;
+}
+
+h1{
+    font-family: "Fraunces", serif;
+    font-weight: 750;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+    color: var(--darkblue);
+    line-height: 1.7rem;
+}
+
+.description{
+    font-weight: 500;
+    color: var(--grayblue);
+    font-size: 0.9rem;
+    margin-top: 0rem;
+    margin-bottom: 1.0rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.03rem;
+}
+
+.price_grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: fit-content;
+    grid-template-areas: "text text";
+}
+
+.price{
+    font-family: "Fraunces", serif;
+    font-size: 2.2rem;
+    color: var(--cyan);
+    font-weight: 800;
+}
+
+.erased_price{
+    
+    font-size: 0.85rem;
+    color: var(--grayblue);
+    text-decoration: line-through;
+    font-weight: 500;
+    margin-top: 0.7rem;
+    margin-left: 1.2rem;
+}
+
+.button{
+    background-color: var(--cyan);
+    border-radius: 8px;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    height: 3rem;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.button:hover{
+    background-color: var(--grayblue);
+    transition-duration: 0.2s;
+}
+
+@media screen and (min-width:700px) {
+    .image{
+        background-image: ("./images/image-product-desktop.jpg");
+    }
+
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "image" "text";
+    }
+    
+
+}
+
